@@ -21,9 +21,9 @@ form.addEventListener('submit', (event) => {
   if (!form.checkValidity()) { form.reportValidity(); return; }
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
-  const project = document.getElementById('project').value;
+  const game = document.getElementById('game').value;
   const note = document.getElementById('note').value.trim() || 'No notes provided yet.';
-  const subject = encodeURIComponent(`Calitoy Cues brief — ${project} / ${name}`);
-  const body = encodeURIComponent(`CALITOY CUES BRIEF\n\nName: ${name}\nEmail: ${email}\nProject: ${project}\n\nThe moment:\n${note}`);
-  document.getElementById('notice').innerHTML = `Your cue brief is ready. <a href="mailto:joseph@xcalitoy.com?subject=${subject}&body=${body}">SEND IT TO CALITOY CUES →</a>`;
+  const subject = encodeURIComponent(`Calitoy Cues build brief — ${name}`);
+  const body = encodeURIComponent(`CALITOY CUES BUILD BRIEF\n\nName: ${name}\nEmail: ${email}\nGame: ${game}\n\nCue direction:\n${note}`);
+  document.getElementById('notice').innerHTML = `Your build brief is ready. <a href="mailto:joseph@xcalitoy.com?subject=${subject}&body=${body}">SEND IT TO CALITOY CUES →</a>`;
 });
